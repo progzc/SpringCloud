@@ -22,3 +22,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: payment8002 #主机名称:服务名称修改
+    prefer-ip-address: true # 访问信息有IP地址显示（需要引入spring-boot-starter-actuator）
