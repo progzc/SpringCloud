@@ -25,3 +25,5 @@ eureka:
   instance:
     instance-id: payment8001 #主机名称:服务名称修改
     prefer-ip-address: true # 访问信息有IP地址显示（需要引入spring-boot-starter-actuator）
+#    lease-renewal-interval-in-seconds: 30 # Eureka客户端向服务端发送心跳的时间间隔，默认为30s
+#    lease-expiration-duration-in-seconds: 90 # Eureka服务端在收到最后一次心跳后等待时间上限，默认为90s，超时将剔除服务
