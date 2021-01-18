@@ -1,0 +1,21 @@
+server:
+  port: 84
+
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 8.129.65.158:8090 # 配置Nginx地址
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # 配置sentinel地址
+        port: 8719 # 若8080连接不成功，会连接到8719;若8719连接不成功，则端口号会+1,直到找到可用的服务即可
+
+feign:
+  sentinel:
+    enabled: true # 激活OpenFeign对Sentinel的支持
+
+service-url:
+  nacos-user-service: http://nacos-payment-provider
