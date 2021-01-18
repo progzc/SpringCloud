@@ -12,6 +12,10 @@
     <artifactId>cloudalibaba-sentinel-service8401</artifactId>
 
     <dependencies>
+<dependency>
+    <groupId>com.alibaba.csp</groupId>
+    <artifactId>sentinel-datasource-nacos</artifactId>
+</dependency>
         <dependency>
             <groupId>com.zcprog.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
@@ -20,10 +24,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
