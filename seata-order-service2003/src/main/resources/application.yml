@@ -1,0 +1,30 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group # 自定义事务组名称需要与seata-server中的对应
+    nacos:
+      discovery:
+        server-addr: 8.129.65.158:8090 # 配置Nginx地址(反向代理转发到Nacos)
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://8.129.65.158:3306/seata_account
+    username: root
+    password: root123_zC
+
+feign:
+  hystrix:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
